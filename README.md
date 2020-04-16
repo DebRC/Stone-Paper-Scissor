@@ -1,4 +1,4 @@
 # Stone-Paper-Scissor
-My second try!
+Most easiest PyGame for all the beginners out there!
 
-A really popular game and also an easy game to make for all the beginners!
+A really popular and an easy game!
