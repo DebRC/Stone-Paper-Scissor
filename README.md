@@ -1,4 +1,7 @@
 # Stone-Paper-Scissor
-Most easiest PyGame for all the beginners out there!
+Player vs. Computer is added with immersive sounds.
 
-A really popular and an easy game!
+Demo
+![Farmers Market Finder Demo](Demo/Demo.gif)
+
+Issues/Future Upgrades - Add restart button at end of each game.
