@@ -19,44 +19,44 @@ screen=pygame.display.set_mode((WIDTH,HEIGHT))
 
 #caption and icon
 pygame.display.set_caption("Stone Paper Scissor")
-icon=pygame.image.load("icon.png")
+icon=pygame.image.load("Images\\icon.png")
 pygame.display.set_icon(icon)
 
 #user
-stone_user=pygame.image.load("stone_user.png")
-paper_user=pygame.image.load("paper_user.png")
-scissor_user=pygame.image.load("scissor_user.png")
-reset_user=pygame.image.load("reset_user.png")
+stone_user=pygame.image.load("Images\\stone_user.png")
+paper_user=pygame.image.load("Images\\paper_user.png")
+scissor_user=pygame.image.load("Images\\scissor_user.png")
+reset_user=pygame.image.load("Images\\reset_user.png")
 user_pos=[172,344]
 player_score=0
 user_list=["Stone","Paper","Scissor"]
 
 #comp
-stone_comp=pygame.image.load("stone_comp.png")
-paper_comp=pygame.image.load("paper_comp.png")
-scissor_comp=pygame.image.load("scissor_comp.png")
-reset_comp=pygame.image.load("reset_comp.png")
+stone_comp=pygame.image.load("Images\\stone_comp.png")
+paper_comp=pygame.image.load("Images\\paper_comp.png")
+scissor_comp=pygame.image.load("Images\\scissor_comp.png")
+reset_comp=pygame.image.load("Images\\reset_comp.png")
 comp_pos=[172,0]
 comp_score=0
 comp_list=["Stone","Paper","Scissor"]
 
 #buttons
-stone_button=pygame.image.load("stone_button.jpg")
-paper_button=pygame.image.load("paper_button.jpg")
-scissor_button=pygame.image.load("scissor_button.jpg")
+stone_button=pygame.image.load("Images\\stone_button.png")
+paper_button=pygame.image.load("Images\\paper_button.png")
+scissor_button=pygame.image.load("Images\\scissor_button.png")
 
 #background image
-background = pygame.image.load("background.jpg")
+background = pygame.image.load("Images\\background.jpg")
 screen.blit(background,(0,0))
 screen.blit(reset_user,(user_pos[0],user_pos[1]))
 screen.blit(reset_comp,(comp_pos[0],comp_pos[1]))
 
-mixer.music.load("background.mp3")
+mixer.music.load("Sounds\\background.mp3")
 mixer.music.play(-1)
 
-font1=pygame.font.Font("font1.ttf",35, bold=False, italic=True)
-font2=pygame.font.Font("font2.otf",23, bold=True, italic=False)
-font3=pygame.font.Font("font3.ttf",25, bold=True, italic=True)
+font1=pygame.font.Font("Fonts\\font1.ttf",35, bold=False, italic=True)
+font2=pygame.font.Font("Fonts\\font2.otf",23, bold=True, italic=False)
+font3=pygame.font.Font("Fonts\\font3.ttf",25, bold=True, italic=True)
 
 game_over=False
 winner=0
@@ -74,7 +74,7 @@ while(1):
 				y=click[1]
 				if (x>=443 and x<=525 and y>=417 and y<=457):
 					screen.blit(background,(0,0))
-					button_sound=mixer.Sound("button.wav")
+					button_sound=mixer.Sound("Sounds\\button.wav")
 					button_sound.play()
 					user_choice=user_list[0]
 					screen.blit(stone_user,(user_pos[0],user_pos[1]))
@@ -97,7 +97,7 @@ while(1):
 						player_score+=1
 				elif (x>=443 and x<=525 and y>=467 and y<=507):
 					screen.blit(background,(0,0))
-					button_sound=mixer.Sound("button.wav")
+					button_sound=mixer.Sound("Sounds\\button.wav")
 					button_sound.play()
 					user_choice=user_list[1]
 					screen.blit(paper_user,(user_pos[0],user_pos[1]))
@@ -120,7 +120,7 @@ while(1):
 						comp_score+=1
 				elif (x>=443 and x<=525 and y>=517 and y<=557):
 					screen.blit(background,(0,0))
-					button_sound=mixer.Sound("button.wav")
+					button_sound=mixer.Sound("Sounds\\button.wav")
 					button_sound.play()
 					user_choice=user_list[2]
 					screen.blit(scissor_user,(user_pos[0],user_pos[1]))
@@ -159,13 +159,13 @@ while(1):
 			clock.tick(60)
 			pygame.display.update()
 		if(player_score==5):
-			explosion=mixer.Sound("gameover.wav")
+			explosion=mixer.Sound("Sounds\\gameover.wav")
 			mixer.music.stop()
 			explosion.play()
 			winner="user"
 			game_over=True
 		if(comp_score==5):
-			explosion=mixer.Sound("gameover.wav")
+			explosion=mixer.Sound("Sounds\\gameover.wav")
 			mixer.music.stop()
 			explosion.play()
 			winner="computer"
