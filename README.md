@@ -2,7 +2,7 @@
 The popular game Stone Paper Scissor implemented as a desktop app using Pygame Module of Python.
 Player vs. Computer is added with immersive sounds.
 
-### Demo
+### Gameplay
 ![Farmers Market Finder Demo](Demo/Demo.gif)
 
 ### Issues/Future Upgrades
